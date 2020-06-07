@@ -606,22 +606,22 @@ Tenseur pmod(Tenseur Tens, Matrice M, int k){
 
 //HOSVD
 
-TenseurSVD hosvd(Tenseur T){
-    Matrice TablMat[T.ordre];
-    TenseurSVD TSVD(T.d, T.ordre, T.vect_tens, TablMat));
-    for (int k = 0; k < T.ordre; k++){
-        Matrice U, Sigma, V;
-        Matrice  TablMatrice_SVD[3];
-        TablMatrice_SVD[0] = U;
-        TablMatrice_SVD[1] = Sigma;
-        TablMatrice_SVD[2] = V;
+//TenseurSVD hosvd(Tenseur T){
+    //Matrice TablMat[T.ordre];
+    //TenseurSVD TSVD(T.d, T.ordre, T.vect_tens, TablMat));
+    //for (int k = 0; k < T.ordre; k++){
+        //Matrice U, Sigma, V;
+        //Matrice  TablMatrice_SVD[3];
+        //TablMatrice_SVD[0] = U;
+        //TablMatrice_SVD[1] = Sigma;
+        //TablMatrice_SVD[2] = V;
 
-        svd(T.mode(k+1), TablMatrice_SVD);
+        //svd(T.mode(k+1), TablMatrice_SVD);
 
-        TSVD.TableauMatrice[k] = U;
-    }
-    return TSVD;
-};
+        //TSVD.TableauMatrice[k] = U;
+    //}
+    //return TSVD;
+//};
 
 int main() {
     //Validation Partie 1 : classe Vecteur
@@ -876,69 +876,69 @@ int main() {
 
     Matrice Q;
 
-    Matrice QRPIV_M (qrpivot(GrandM, Q));
+    //Matrice QRPIV_M (qrpivot(GrandM, Q));
 
     cout << endl << "-----------" << "Part III : Question 5" << endl;
 
-    Matrice U, Sigma, V;
-    Matrice  TablMatrice[3];
-    TablMatrice[0] = U;
-    TablMatrice[1] = Sigma;
-    TablMatrice[2] = V;
+    //Matrice U, Sigma, V;
+    //Matrice  TablMatrice[3];
+    //TablMatrice[0] = U;
+    //TablMatrice[1] = Sigma;
+    //TablMatrice[2] = V;
 
-    float colo_1_A[2] = {1,0};
-    float colo_2_A[2] = {0,-1};
+    //float colo_1_A[2] = {1,0};
+    //float colo_2_A[2] = {0,-1};
 
-    Vecteur vect_1_A (colo_1_A,2);
-    Vecteur vect_2_A (colo_2_A,2);
+    //Vecteur vect_1_A (colo_1_A,2);
+    //Vecteur vect_2_A (colo_2_A,2);
 
-    Matrice AA(2,2);
-    AA[0] = vect_1_A;
-    AA[1] = vect_2_A;
+    //Matrice AA(2,2);
+    //AA[0] = vect_1_A;
+    //AA[1] = vect_2_A;
 
-    float colo_1_B[2] = {float(2*sqrt(2)),float(-1*sqrt(2))};
-    float colo_2_B[2] = {float(-2*sqrt(2)),float(-1*sqrt(2))};
+    //float colo_1_B[2] = {float(2*sqrt(2)),float(-1*sqrt(2))};
+    //float colo_2_B[2] = {float(-2*sqrt(2)),float(-1*sqrt(2))};
 
-    Vecteur vect_1_B (colo_1_B,2);
-    Vecteur vect_2_B (colo_2_B,2);
+    //Vecteur vect_1_B (colo_1_B,2);
+    //Vecteur vect_2_B (colo_2_B,2);
 
-    Matrice BB(2,2);
-    BB[0] = vect_1_A;
-    BB[1] = vect_2_A;
+    //Matrice BB(2,2);
+    //BB[0] = vect_1_A;
+    //BB[1] = vect_2_A;
 
-    float colo_1_C[2] = {0.5,float(sqrt(3)/2)};
-    float colo_2_C[2] = {float(3*sqrt(3)/2),float(-3/2)};
-    float colo_3_C[2] = {0,0};
-
-
-    Vecteur vect_1_C (colo_1_C,2);
-    Vecteur vect_2_C (colo_3_C,2);
-    Vecteur vect_3_C (colo_3_C,2);
+    //float colo_1_C[2] = {0.5,float(sqrt(3)/2)};
+    //float colo_2_C[2] = {float(3*sqrt(3)/2),float(-3/2)};
+    //float colo_3_C[2] = {0,0};
 
 
-    Matrice CC(2,3);
-    CC[0] = vect_1_C;
-    CC[1] = vect_2_C;
-    CC[2] = vect_3_C;
-
-    svd(AA, TablMatrice);
-
-    TablMatrice[0].affiche();
-    TablMatrice[1].affiche();
-    TablMatrice[2].affiche();
-
-    svd(BB, TablMatrice);
+    //Vecteur vect_1_C (colo_1_C,2);
+    //Vecteur vect_2_C (colo_3_C,2);
+    //Vecteur vect_3_C (colo_3_C,2);
 
 
-    TablMatrice[0].affiche();
-    TablMatrice[1].affiche();
-    TablMatrice[2].affiche();
+    //Matrice CC(2,3);
+    //CC[0] = vect_1_C;
+    //CC[1] = vect_2_C;
+    //CC[2] = vect_3_C;
 
-    svd(CC, TablMatrice);
+    //svd(AA, TablMatrice);
 
-    TablMatrice[0].affiche();
-    TablMatrice[1].affiche();
-    TablMatrice[2].affiche();
+    //TablMatrice[0].affiche();
+    //TablMatrice[1].affiche();
+    //TablMatrice[2].affiche();
+
+    //svd(BB, TablMatrice);
+
+
+    //TablMatrice[0].affiche();
+    //TablMatrice[1].affiche();
+    //TablMatrice[2].affiche();
+
+    //svd(CC, TablMatrice);
+
+    //TablMatrice[0].affiche();
+    //TablMatrice[1].affiche();
+    //TablMatrice[2].affiche();
 
 
     cout << endl << endl << "#####";
@@ -1039,9 +1039,9 @@ int main() {
     calA[0] = vec_5;
     calA[1] = vec_6;
 
-    Tenseur S (pmod(calT, calA, 3));
+    //Tenseur S (pmod(calT, calA, 3));
 
-    S.affiche_vect();
+    //S.affiche_vect();
 
 
     cout << endl << "-----------" << "Brouillon" << endl;
